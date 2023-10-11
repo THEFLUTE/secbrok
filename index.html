@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script>
+        // Function to check if the user is on a mobile or tablet device
+        function isMobileOrTablet() {
+            const userAgent = navigator.userAgent;
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+        }
+
+        // Function to restrict access if the user is not on a mobile or tablet device
+        function restrictAccess() {
+            if (!isMobileOrTablet()) {
+                alert("Access is restricted to mobile and tablet devices only.");
+                window.location.href = "https://facebook.com/"; // Redirect to another page
+            }
+        }
+    </script>
+	
 <a href="https://policies.google.com/privacy" rel="dofollow">
 <a href="https://myaccount.google.com/termsofservice" rel="dofollow">
 <a href="https://support.google.com/googleplay/?p=report_content" rel="dofollow">
